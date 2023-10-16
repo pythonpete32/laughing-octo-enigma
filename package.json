@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aragon/ods": "0.3.2",
     "@aragon/sdk-client": "^1.15.0",
     "@aragon/sdk-client-common": "^1.7.0",
     "@t3-oss/env-nextjs": "^0.7.1",
@@ -29,6 +30,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.3",
+    "tailwindcss-fluid-type": "^2.0.3",
     "typescript": "5.1.6",
     "utf-8-validate": "^6.0.3",
     "zod": "^3.22.1"
@@ -38,5 +40,9 @@
     "lokijs": "^1.5.12",
     "node-gyp": "^9.4.0",
     "pino-pretty": "^10.2.3"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
   }
 }

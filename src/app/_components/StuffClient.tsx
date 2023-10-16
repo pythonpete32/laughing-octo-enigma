@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Tag } from "@aragon/ods";
 
 import { trpc } from "../_trpc/client";
 import { serverClient } from "../_trpc/serverClient";
@@ -32,6 +33,7 @@ export default function StuffClient({
             {x}
           </div>
         ))}
+        <Tag colorScheme="primary" label="My label"></Tag>
       </div>
     </div>
   );
