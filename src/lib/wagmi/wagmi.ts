@@ -2,7 +2,7 @@ import { createConfig } from "wagmi";
 import { getDefaultConfig } from "connectkit";
 import { env } from "@/env.mjs";
 import { siteConfig } from "@/config/site";
-import { polygon, polygonMumbai } from "viem/chains";
+import { mainnet, polygon, polygonMumbai } from "viem/chains";
 
 export const config = createConfig(
     getDefaultConfig({
@@ -18,6 +18,6 @@ export const config = createConfig(
         appDescription: siteConfig.description,
         appUrl: siteConfig.url, // your app's url
         appIcon: "https://family.co/logo.png", // your app's icon, no bigger than 1024x1024px (max. 1MB)
-        chains: [polygon, polygonMumbai]
+        chains: [mainnet, polygon, polygonMumbai]
     }),
 );

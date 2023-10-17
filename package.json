@@ -13,7 +13,8 @@
     "@aragon/sdk-client": "^1.15.0",
     "@aragon/sdk-client-common": "^1.7.0",
     "@t3-oss/env-nextjs": "^0.7.1",
-    "@tanstack/react-query": "^4.32.6",
+    "@tanstack/react-query": "^4.36.1",
+    "@tanstack/react-query-devtools": "^4.36.1",
     "@trpc/client": "^10.37.1",
     "@trpc/react-query": "^10.37.1",
     "@trpc/server": "^10.37.1",
@@ -33,7 +34,7 @@
     "tailwindcss": "3.3.3",
     "tailwindcss-fluid-type": "^2.0.3",
     "typescript": "5.1.6",
-    "utf-8-validate": "^6.0.3",
+    "utf-8-validate": "^5.0.2",
     "viem": "^1.16.6",
     "wagmi": "^1.4.4",
     "zod": "^3.22.1"
