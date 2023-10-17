@@ -2,8 +2,9 @@
 import { useState } from "react";
 import { Tag } from "@aragon/ods";
 
-import { trpc } from "../_trpc/client";
-import { serverClient } from "../_trpc/serverClient";
+import { trpc } from "../../lib/trpc/client";
+import { serverClient } from "../../lib/trpc/serverClient";
+import { ConnectKitButton } from "connectkit";
 
 export default function StuffClient({
   initialStuff,
@@ -23,6 +24,7 @@ export default function StuffClient({
 
   return (
     <div>
+      <ConnectKitButton />
       <div className="text-black my-5 text-3xl">
         {/* {initialStuff?.map((x) => ( */}
         {/* we could just render initial stuff here, but if this ever changes because of some action like 

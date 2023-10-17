@@ -1,10 +1,10 @@
 import { z } from "zod";
 
 import { publicProcedure, router } from "./trpc";
-import { getClients } from "@/lib/aragon";
+import { aragonClients } from "@/lib/aragon/aragon";
 
 
-const { client } = getClients(1);
+const { client } = aragonClients(1);
 
 
 export const appRouter = router({

@@ -1,7 +1,7 @@
 "use client";
 
 import { HeaderDao } from "@aragon/ods";
-import { serverClient } from "../_trpc/serverClient";
+import { serverClient } from "../../lib/trpc/serverClient";
 
 type DaoHeaderType = {
   dao: Awaited<ReturnType<(typeof serverClient)["getDao"]>>;

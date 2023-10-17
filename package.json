@@ -22,6 +22,7 @@
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
     "bufferutil": "^4.0.8",
+    "connectkit": "^1.5.3",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.16",
     "ethers": "5",
@@ -33,6 +34,8 @@
     "tailwindcss-fluid-type": "^2.0.3",
     "typescript": "5.1.6",
     "utf-8-validate": "^6.0.3",
+    "viem": "^1.16.6",
+    "wagmi": "^1.4.4",
     "zod": "^3.22.1"
   },
   "devDependencies": {

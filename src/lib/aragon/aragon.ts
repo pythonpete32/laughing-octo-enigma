@@ -1,13 +1,14 @@
 import { Context, ContextParams, LIVE_CONTRACTS, SupportedVersion } from "@aragon/sdk-client-common";
 import { Client, TokenVotingClient } from "@aragon/sdk-client";
-import { env } from "../env.mjs";
-import { CHAIN_METADATA, SUBGRAPH_API_URL, findNetworkKeyById, translateToNetworkishName } from "../config/chains";
+import { env } from "../../env.mjs";
+import { CHAIN_METADATA, SUBGRAPH_API_URL, findNetworkKeyById, translateToNetworkishName } from "../../config/chains";
+import { type Signer } from "ethers";
 
 
 
 
 
-export function getClients(chainId: number) {
+export function aragonClients(chainId: number, signer?: Signer) {
     const translatedNetwork = translateToNetworkishName(
         findNetworkKeyById(chainId)
     );
@@ -17,7 +18,7 @@ export function getClients(chainId: number) {
             LIVE_CONTRACTS[SupportedVersion.LATEST][translatedNetwork]
                 .daoFactoryAddress,
         network: translatedNetwork,
-        signer: undefined,
+        signer,
         web3Providers: CHAIN_METADATA[findNetworkKeyById(chainId)].rpc[0],
         graphqlNodes: [{ url: SUBGRAPH_API_URL[findNetworkKeyById(chainId)]! }],
         ipfsNodes: [

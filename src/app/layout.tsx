@@ -2,7 +2,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import Provider from "@/app/_trpc/Provider";
+import TrpcProvider from "@/lib/trpc/Provider";
+import WagmiProvider from "@/lib/wagmi/provider";
+import AragonProvider from "@/lib/aragon/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Provider>{children}</Provider>
+        <TrpcProvider>
+          <WagmiProvider>
+            <AragonProvider>{children}</AragonProvider>
+          </WagmiProvider>
+        </TrpcProvider>
       </body>
     </html>
   );
